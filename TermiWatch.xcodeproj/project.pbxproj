@@ -31,6 +31,7 @@
 		5DC87B2522ABBAD5005243D5 /* PMKHealthKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5DC87B2422ABBAD5005243D5 /* PMKHealthKit */; };
 		5DD885B4237743DC003B1A55 /* PMKCoreLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 5DD885B3237743DC003B1A55 /* PMKCoreLocation */; };
 		5DD885B6237743E9003B1A55 /* PMKCoreLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 5DD885B5237743E9003B1A55 /* PMKCoreLocation */; };
+		C033BB24241B03650012C6EC /* WHNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C033BB23241B03650012C6EC /* WHNotifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		5D50F69621AA972B00A9E754 /* BatteryInfoNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryInfoNotifier.swift; sourceTree = "<group>"; };
 		5D50F69821AAD6D400A9E754 /* TemperatureNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureNotifier.swift; sourceTree = "<group>"; };
 		5DB67F1E21A3E60C00AFA77A /* HealthKitUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitUtils.swift; sourceTree = "<group>"; };
+		C033BB23241B03650012C6EC /* WHNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHNotifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				5DB67F1E21A3E60C00AFA77A /* HealthKitUtils.swift */,
 				5D3E854F21A0246E00FA946B /* InterfaceController.swift */,
 				5D50F69821AAD6D400A9E754 /* TemperatureNotifier.swift */,
+				C033BB23241B03650012C6EC /* WHNotifier.swift */,
 				5D3E855321A0246F00FA946B /* Assets.xcassets */,
 				5D3E855521A0246F00FA946B /* Info.plist */,
 			);
@@ -380,6 +383,7 @@
 				5D3E855221A0246E00FA946B /* ExtensionDelegate.swift in Sources */,
 				5DB67F1F21A3E60C00AFA77A /* HealthKitUtils.swift in Sources */,
 				5D50F69921AAD6D400A9E754 /* TemperatureNotifier.swift in Sources */,
+				C033BB24241B03650012C6EC /* WHNotifier.swift in Sources */,
 				5D3E855021A0246E00FA946B /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,7 +555,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = C89KNBM28S;
+				DEVELOPMENT_TEAM = QR825BQSTL;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TermiWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -559,7 +563,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kuglee.TermiWatch.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = in.smpark.TermiWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -578,7 +582,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = C89KNBM28S;
+				DEVELOPMENT_TEAM = QR825BQSTL;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TermiWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -586,7 +590,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kuglee.TermiWatch.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = in.smpark.TermiWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -605,10 +609,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = C89KNBM28S;
+				DEVELOPMENT_TEAM = QR825BQSTL;
 				IBSC_MODULE = TerminalWatchFace_WatchKit_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/TermiWatch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kuglee.TermiWatch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = in.smpark.TermiWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -627,10 +631,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = C89KNBM28S;
+				DEVELOPMENT_TEAM = QR825BQSTL;
 				IBSC_MODULE = TerminalWatchFace_WatchKit_Extension;
 				INFOPLIST_FILE = "$(SRCROOT)/TermiWatch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kuglee.TermiWatch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = in.smpark.TermiWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -649,14 +653,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = C89KNBM28S;
+				DEVELOPMENT_TEAM = QR825BQSTL;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TermiWatch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kuglee.TermiWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = in.smpark.TermiWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -672,14 +676,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = C89KNBM28S;
+				DEVELOPMENT_TEAM = QR825BQSTL;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/TermiWatch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kuglee.TermiWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = in.smpark.TermiWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

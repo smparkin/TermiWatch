@@ -142,7 +142,7 @@ let localizedTemperatureStyle: (MeasurementFormatter) -> Void = {
 func progressBarString(percent: UInt, steps: UInt) -> String? {
   let fillCount = Int((Float(steps) * (Float(percent) / 100.0)).rounded())
   let full = String(repeating: "#", count: fillCount)
-  let empty = String(repeating: ".", count: Int(steps) - fillCount)
+  let empty = String(repeating: "•", count: Int(steps) - fillCount)
 
   return "[\(full + empty)]"
 }
@@ -161,8 +161,8 @@ class InterfaceController: WKInterfaceController {
   @IBOutlet var batteryLabel: WKInterfaceLabel!
   @IBOutlet var activityLabel: WKInterfaceLabel!
   @IBOutlet var stepsLabel: WKInterfaceLabel!
-  @IBOutlet var heartRateLabel: WKInterfaceLabel!
   @IBOutlet var temperatureLabel: WKInterfaceLabel!
+    @IBOutlet var whlbLabel: WKInterfaceLabel!
 
   override func awake(withContext context: Any?) {
     super.awake(withContext: context)
@@ -242,16 +242,22 @@ class InterfaceController: WKInterfaceController {
 
         self?.stepsLabel.setText("\(Int($0)) steps")
       }
-
-      subscribeToQuantityType(
-        forSampleType: HKSampleType.quantityType(
-          forIdentifier: .heartRate
-        )!,
-        unit: HKUnit(from: "count/min"),
-        healthStore: healthStore
-      ) { [weak self] in
-        self?.heartRateLabel.setText("\(Int($0)) BPM")
+    }
+    
+    //MARK: - WH
+    firstly {
+      CLLocationManager.requestAuthorization()
+    }.done { _ in
+      NotificationCenter.default.addObserver(
+        forName: WHNotifier.StatusDidChangeNotification,
+        object: nil,
+        queue: nil
+      ) { [weak self] notification in
+        let status = notification.object as! String
+        self?.whlbLabel.setText(status)
       }
+
+      WHNotifier.shared.start()
     }.catch {
       print("Error:", $0)
     }

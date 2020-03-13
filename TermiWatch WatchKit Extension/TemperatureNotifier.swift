@@ -74,7 +74,7 @@ public class TemperatureNotifier {
     return timer != nil && timer!.isValid
   }
 
-  public func start(withTimeInterval interval: TimeInterval = 600) {
+  public func start(withTimeInterval interval: TimeInterval = 1800) {
     timer?.invalidate()
 
     timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) {

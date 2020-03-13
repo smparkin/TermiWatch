@@ -10,7 +10,6 @@ let hkDataTypesOfInterest = Set([
   HKCategoryType.categoryType(forIdentifier: .appleStandHour)!,
   HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!,
   HKObjectType.quantityType(forIdentifier: .appleExerciseTime)!,
-  HKObjectType.quantityType(forIdentifier: .heartRate)!,
   HKObjectType.quantityType(forIdentifier: .stepCount)!,
 ])
 
